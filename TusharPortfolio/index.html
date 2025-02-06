@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tushar Patil Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="#home" class="brand">Tushar Patil</a>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to Tushar Patil's Portfolio</h1>
+        <p>Hello! I'm a passionate developer specializing in Java Spring Boot, .NET C#, and MySQL.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>Highlight your technical and soft skills here.</p>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <p>Showcase your professional journey and projects here.</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p>Add links or images of your projects here.</p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p>Include your academic qualifications and certifications here.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Provide your contact information or a contact form here.</p>
+    </section>
+
+    <script>
+        // Highlight the active section link in the navbar
+        const navLinks = document.querySelectorAll('nav ul li a');
+        const sections = document.querySelectorAll('section');
+    
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 50; // Offset for sticky navbar
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+    
+            navLinks.forEach((link) => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

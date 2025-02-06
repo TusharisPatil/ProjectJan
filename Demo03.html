@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #virattext {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+        }
+        #redbutton {
+            padding: 10px 20px;
+            background-color:  #ff4d4d;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        #yellowbutton {
+            background-color: yellow;
+            color: white;
+            cursor: grab;
+            font: 300;
+            transition: background-color 0. 5s;
+        }
+        #greenbutton 
+        {
+            background-color: green;
+            color: white;
+            cursor: pointer;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        #bluebutton 
+        {
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        #redButton:hover {
+            background-color:  #ff1a1a;
+        }
+
+    </style>
+</head>
+<body>
+    <h2 id="virattext">Virat Kohli</h2>
+    <button id="redbutton" onclick="changeColor()">RED</button>
+    <button id="yellowbutton" onclick="changeColorToYellow()">Yellow</button>
+    <button id="greenbutton" onclick="changeColorandSize()">Green</button>
+    <button id="bluebutton" onclick="changeProperties">Blue</button>
+
+    <script>
+        function changeColor() {
+            document.getElementById("virattext").style.color="red";
+        }
+
+        function changeColorToYellow() {
+            document.getElementById("virattext").style.color="yellow";
+        }
+
+        function changeColorandSize() {
+            const virattext = document.getElementById("virattext");
+            virattext.style.color = "green";
+            virattext.style.fontSize = "50px";
+        }
+
+        function changeProperties() {
+            const virattext = document.getElementById("virattext");
+            virattext.style.color = "blue";
+
+        }
+    </script>
+    
+</body>
+</html>

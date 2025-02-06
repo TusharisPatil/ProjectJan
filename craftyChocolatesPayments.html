@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crafty Chocolates Payments</title>
+    <link rel="stylesheet" href="craftyChocolates.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="brand-name">
+            Crafty Chocolates
+        </div>
+        <div class="your-order-text">
+            <span>Your Order</span>
+        </div>
+        <nav>
+            <div class="payment-page">
+                <i class="fas fa-money-bill-wave"></i>
+                <span>Payment Page</span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="payment-container">
+        
+        <!-- Card for Selected Product -->
+       <div class="card">
+        <div class="selected-product-container">
+            <div class="selected-product">
+                <img id="selected-product-img" alt="Selected Product" />
+                <div class="product-details">
+                    <h3 id="selected-product-name"></h3>
+                    <p id="selected-product-price"></p>
+
+                     <!-- Quantity Counter -->
+                     <div class="quantity-counter">
+                        <button id="decrease-btn" class="btn">-</button>
+                        <span id="product-quantity">1</span>
+                        <button id="increase-btn" class="btn">+</button>
+                    </div>
+
+                    <!-- Total Price Display -->
+                    <div class="total-price">
+                        <span>Total: ₹</span><span id="total-amount">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+   
+    </div>
+    
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Crafty Chocolates. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Retrieve selected product from localStorage
+            const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+    
+            // HTML elements
+            const productImgElement = document.getElementById('selected-product-img');
+            const productNameElement = document.getElementById('selected-product-name');
+            const productPriceElement = document.getElementById('selected-product-price');
+            const quantityElement = document.getElementById('product-quantity');
+            const totalAmountElement = document.getElementById('total-amount');
+            const decreaseBtn = document.getElementById('decrease-btn');
+            const increaseBtn = document.getElementById('increase-btn');
+    
+            // Initialize variables
+            let productPrice = 0;
+            let productQuantity = 1;
+    
+            // Display selected product details
+            if (selectedProduct) {
+                // Set product image, name, and price
+                productImgElement.src = selectedProduct.img;
+                productNameElement.textContent = selectedProduct.name;
+                productPriceElement.textContent = selectedProduct.price;
+    
+                // Extract numeric price from the string (removing ₹ symbol)
+                productPrice = parseInt(selectedProduct.price.replace(/₹|\s/g, ''));
+    
+                // Update total amount initially
+                updateTotalAmount();
+            }
+    
+            // Event listeners for quantity increment and decrement
+            decreaseBtn.addEventListener('click', () => {
+                if (productQuantity > 1) {
+                    productQuantity--;
+                    quantityElement.textContent = productQuantity;
+                    updateTotalAmount();
+                }
+            });
+    
+            increaseBtn.addEventListener('click', () => {
+                productQuantity++;
+                quantityElement.textContent = productQuantity;
+                updateTotalAmount();
+            });
+    
+            // Function to update the total amount
+            function updateTotalAmount() {
+                const total = productPrice * productQuantity;
+                totalAmountElement.textContent = total;
+            }
+        });
+    </script>
+    
+</body>
+</html>

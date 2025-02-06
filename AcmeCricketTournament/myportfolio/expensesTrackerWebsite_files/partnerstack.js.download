@@ -1,0 +1,73 @@
+(function (a) {
+    var n = 'ps_xid',
+        o = 'ps_partner_key',
+        s = 'data-partnerstack-domain',
+        u = 'data-partnerstack-public-key',
+        r = {
+            version: '1.0.0',
+            domain: '',
+            public_key: '',
+            decodeB64: function (e) {
+                return typeof e != 'string'
+                    ? ''
+                    : decodeURIComponent(
+                        atob(e)
+                            .split('')
+                            .map(function (t) {
+                                return '%' + ('00' + t.charCodeAt(0).toString(16)).slice(-2);
+                            })
+                            .join(''),
+                    );
+            },
+            getQueryParameter: function (e) {
+                var t = new URLSearchParams(document.location.search);
+                return t.get(e);
+            },
+            setCookie: function (e, t) {
+                if (t) {
+                    var i = new Date(Date.now() + 86400000 * 90).toUTCString(),
+                        m = '.appsmith.com';
+                    document.cookie = e + '=' + t + ';Expires=' + i + ';Domain=' + m + ';path=/;samesite=Lax';
+                }
+            },
+            getCookie: function (e) {
+                var t = document.cookie.match(new RegExp('(^| )' + e + '([A-z0-9]{8}_[A-z0-9]{4})?=([^;]+)'));
+                return t ? t[3] : '';
+            },
+            getPartnerKey: function () {
+                try {
+                    return this.decodeB64(this.getCookie(o));
+                } catch {
+                    return this.getCookie(o);
+                }
+            },
+            createSignup: function (e) {
+                var t = this.getCookie(n),
+                    i = this.getPartnerKey();
+                (t || i) &&
+                    fetch('https://' + this.domain + '/signup', {
+                        method: 'POST',
+                        mode: 'cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            customer_key: e.key,
+                            name: e.name,
+                            email: e.email,
+                            xid: t,
+                            partner_key: i,
+                            public_key: this.public_key,
+                            origin: a.location.origin,
+                            host_domain: a.location.host,
+                        }),
+                    });
+            },
+        },
+        c =
+            document.currentScript ||
+            document.querySelector('script['.concat(u, ']')) ||
+            document.querySelector('script['.concat(s, ']'));
+    c && ((r.domain = c.getAttribute(s) || r.getQueryParameter('pscd')), (r.public_key = c.getAttribute(u))),
+        r.setCookie(n, r.getQueryParameter(n)),
+        r.setCookie(o, r.getQueryParameter(o)),
+        (a.partnerstack = r);
+})(window);

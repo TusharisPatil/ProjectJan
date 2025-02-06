@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crafty_chocolates__products</title>
+    <link rel="stylesheet" href="craftyChocolates.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand-name">
+            Crafty Chocolates
+        </div>
+        <nav>
+            <a href="craftyChocolates.html" class="home-link">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="#products" class="add-to-cart-link">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Add to Cart</span>
+            </a>
+        </nav>
+    </header>
+
+
+    <!-- Product List Section -->
+    <section id="product-list">
+        <div class="product-container">
+            <!-- 15 Product Cards (Add your image paths) -->
+            <div class="product-card">
+                <img src="ChocolateProduct01.avif" alt="Product 1" class="product-img">
+                <h3 class="product-name">Chocolate Delight</h3>
+                <p class="product-price">₹50 per piece</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow(this)">Buy</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="coconut chcolate.jpg" alt="Product 2" class="product-img">
+                <h3 class="product-name">Coconut Fantacy</h3>
+                <p class="product-price">₹50 per piece</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="chocolate01.jpg" alt="Product 3" class="product-img">
+                <h3 class="product-name">Chocolate Knight</h3>
+                <p class="product-price">₹80 per piece</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow(this)">Buy</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="chocolate02.webp" alt="Product 4" class="product-img">
+                <h3 class="product-name">Chocolate Magic</h3>
+                <p class="product-price">₹50 per piece</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="Chocolate11.jpg" alt="Product 5" class="product-img">
+                <h3 class="product-name">Dreamy Chocolate</h3>
+                <p class="product-price">₹50 per piece</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="Chocolate14.jpg" alt="Product 6" class="product-img">
+                <h3 class="product-name">Chocolate Mismatched</h3>
+                <p class="product-price">₹50 per piece</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="strawberry chocolate.webp" alt="Product 7" class="product-img">
+                <h3 class="product-name">Strawbery Classic</h3>
+                <p class="product-price">₹50 per piece</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow(this)">Buy</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="chocolate16.jpg" alt="Product 8" class="product-img">
+                <h3 class="product-name">Chocolate Mighty</h3>
+                <p class="product-price">₹50 per piece</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="coconut chcolate.jpg" alt="Product 9" class="product-img">
+                <h3 class="product-name">South Anan Chocolate</h3>
+                <p class="product-price">₹50 per piece</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="chocolate16.jpg" alt="Product 10" class="product-img">
+                <h3 class="product-name">Chocolate Classic</h3>
+                <p class="product-price">₹50 per piece</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="RoseChocolate.webp" alt="Product 11" class="product-img">
+                <h3 class="product-name">Rose Chocolate</h3>
+                <p class="product-price">₹50 per piece</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow(this)">Buy</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="ChocolateProduct01.avif" alt="Product 12" class="product-img">
+                <h3 class="product-name">Chocolate Delight</h3>
+                <p class="product-price">₹50 per piece</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="chocolate01.jpg" alt="Product 13" class="product-img">
+                <h3 class="product-name">ChocoDelight</h3>
+                <p class="product-price">₹50 per piece</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow(this)">Buy</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="RoseChocolate.webp" alt="Product 14" class="product-img">
+                <h3 class="product-name">Chocolate Rosy</h3>
+                <p class="product-price">₹50 per piece</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="PanChocolate_590x.webp" alt="Product 15" class="product-img">
+                <h3 class="product-name">ChocolatePaan</h3>
+                <p class="product-price">₹50 per piece</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow(this)">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="Chocolate14.jpg" alt="Product 16" class="product-img">
+                <h3 class="product-name">Dreamy Delight</h3>
+                <p class="product-price">₹50 per piece</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow(this)">Buy</button>
+            </div>
+            
+        </div>
+    </section>
+      <footer class="footer">
+        <p>&copy; 2024 Crafty Chocolates. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        function buyNow(button) {
+            // Get the product card element
+            const productCard = button.closest('.product-card');
+    
+            // Extract product details using the updated class names
+            const productImg = productCard.querySelector('.product-img').src;
+            const productName = productCard.querySelector('.product-name').textContent;
+            const productPrice = productCard.querySelector('.product-price').textContent;
+    
+            // Store product details in local storage
+            localStorage.setItem('selectedProduct', JSON.stringify({
+                img: productImg,
+                name: productName,
+                price: productPrice
+            }));
+    
+            // Redirect to the payment page
+            window.location.href = 'craftyChocolatesPayments.html';
+        }
+    </script>
+    
+</body>
+</html>

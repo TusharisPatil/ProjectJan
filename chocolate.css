@@ -1,0 +1,48 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header */
+  header {
+    background-color: #4a2c2a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-image: url('chocolates.jpg');
+    background-size: cover;
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+  }
+  
+  /* Products Section */
+  #products {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .product {
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .product img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+  }
+  

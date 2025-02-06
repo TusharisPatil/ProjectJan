@@ -1,0 +1,750 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Navbar styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Space between brand name, button, and navigation */
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #4e2e2f; /* Chocolate-themed color */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    font-family: Arial, sans-serif;
+    position: fixed; /* Keeps navbar at the top */
+    width: 100%; /* Full width */
+    top: 0; /* Positions it at the very top */
+    z-index: 1000; /* Ensures it appears above other elements */
+}
+
+
+/* Place Your Order Button */
+.order-btn {
+    margin-left: 20px; /* Adds space between brand name and the button */
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: #4e2e2f; /* Dark chocolate color */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for the button */
+.order-btn:hover {
+    background-color: #e6b89c; /* Lighter chocolate color */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.order-btn:active {
+    background-color: #3b1e1a; /* Darker chocolate color when clicked */
+}
+
+/* Navigation links styling */
+.navbar nav {
+    display: flex;
+    justify-content: flex-start; /* Align navigation links to the left */
+}
+
+.navbar nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #e6b89c; /* Light chocolate color for hover */
+}
+
+/* Icon styling */
+.navbar nav a i {
+    font-size: 1.2em; /* Adjust icon size */
+    margin-bottom: 5px; /* Space between icon and text */
+    color: #e6b89c;
+    transition: transform 0.3s, text-shadow 0.3s; /* Smooth scaling and glow effect */
+}
+
+.navbar nav a span {
+    font-size: 0.9em;
+}
+
+/* Hover effect to increase font size for the text labels */
+.navbar nav a:hover span {
+    font-size: 1.1em; /* Increase font size on hover */
+}
+
+/* Link and icon hover effect */
+.navbar nav a:hover, .navbar nav a i:hover {
+    color: #f4d1b2; /* Lighter color on hover */
+    transform: scale(1.1); /* Slight increase in size */
+    text-shadow: 0px 0px 8px #f4d1b2; /* Glow effect */
+}
+  /* Brand name styling */
+.brand-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #e6b89c; /* Light chocolate color */
+  }
+
+
+/* Navigation links styling */
+.navbar nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+  }
+  
+  .navbar nav a:hover {
+    color: #e6b89c; /* Light chocolate color for hover */
+  }
+/* Icon styling */
+  .navbar nav a i {
+    font-size: 1.2em; /* Adjust icon size */
+    margin-bottom: 5px; /* Space between icon and text */
+    color: #e6b89c;
+    transition: transform 0.3s, text-shadow 0.3s; /* Smooth scaling and glow effect */
+  }
+  
+  .navbar nav a span {
+    font-size: 0.9em;
+  }
+  
+  .navbar nav a:hover {
+    color: #e6b89c; /* Light chocolate color for hover */
+  }
+
+  /* Hover effect to increase font size for the text labels */
+  .navbar nav a:hover span {
+    font-size: 1.1em; /* Increase font size on hover */
+  }
+
+  /* Link and icon hover effect */
+  .navbar nav a:hover, .navbar nav a i:hover {
+    color: #f4d1b2; /* Lighter color on hover */
+    transform: scale(1.1); /* Slight increase in size */
+    text-shadow: 0px 0px 8px #f4d1b2; /* Glow effect */
+  }
+
+  section {
+    padding-top: 80px;
+    min-height: 100vh;
+  }
+
+  /* Home section styling */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0; /* Adjust padding to your preference */
+    background-color: #f9f3e8; /* Soft background color if needed */
+  }
+  
+  /* Container for image and text */
+  .home-content {
+    display: flex;
+    width: 90%; /* Adjust width to fit within the section */
+    max-width: 1200px;
+  }
+  
+  /* Styling for image */
+  .home-image {
+    width: 50%; /* Takes half of the section */
+    object-fit: cover;
+  }
+  
+  /* Styling for text container */
+  .home-text {
+    width: 50%; /* Takes the other half */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Home text styling */
+  .home-text h2 {
+    font-size: 2em;
+    color: #4e2e2f; /* Dark chocolate color */
+    margin-bottom: 10px;
+  }
+  
+  .home-text p {
+    font-size: 1.1em;
+    color: #3b2a28;
+  }
+
+  /* General styling for sections */
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh; /* Full screen height */
+    color: white;
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image in each section */
+    background-attachment: fixed; /* Creates a parallax effect */
+    padding: 20px;
+  }
+  
+  /* Background for Home section */
+  
+
+  #home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh; /* Full viewport height */
+    color: white;
+    background-image: url("chocolate\ wallpaper\ home.jpg"); /* Replace with your image path */
+    background-size: cover; /* Covers entire section */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Parallax effect */
+    padding: 20px;
+  }
+
+  #about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh; /* Full viewport height */
+    color: white;
+    background-image: url("chocolate\ wallpaper\ about.jpg"); /* Replace with your image path */
+    background-size: cover; /* Covers entire section */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Parallax effect */
+    padding: 20px;
+  }
+
+  
+/* Products section with background image */
+#products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh; /* Full viewport height */
+    color: white;
+    background-image: url("chocolate\ wallpaper\ products.jpg"); /* Replace with your products image path */
+    background-size: cover; /* Covers entire section */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Parallax effect */
+    padding: 20px;
+  }
+  
+  /* Contacts section with background image */
+  #contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh; /* Full viewport height */
+    color: white;
+    background-image: url("chocolate\ wallpaper\ contac.jpg"); /* Replace with your contacts image path */
+    background-size: cover; /* Covers entire section */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Parallax effect */
+    padding: 20px;
+  }
+  
+  /* General styling for other sections without specific backgrounds */
+  section:not(#home):not(#about):not(#products):not(#contacts) {
+    padding: 60px 20px;
+    min-height: 100vh;
+    color: #333; /* Dark text color */
+    background-color: #f9f3e8; /* Soft color for sections without background image */
+  }
+
+  /* About Section Styling */
+#about {
+    display: flex;
+    align-items: center; /* Align content vertically centered */
+    justify-content: space-between; /* Space between text and image */
+    min-height: 100vh; /* Full viewport height */
+    color: white;
+    background-image: url("chocolate wallpaper about.jpg"); /* Background image */
+    background-size: cover; /* Makes the image cover the entire section */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Parallax effect */
+    padding: 20px;
+}
+
+/* About Content Styling */
+.about-content {
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the row so that the text appears on the right */
+    align-items: center; /* Center content vertically */
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* About Text Styling */
+.about-text {
+    width: 50%; /* Takes up the right half */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Slight transparent background for better text visibility */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the text vertically */
+    text-align: left; /* Align text to the left */
+    z-index: 2;
+}
+
+.about-text h2 {
+    font-size: 2em;
+    color: #4e2e2f; /* Dark chocolate color */
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 1.1em;
+    color: #3b2a28;
+    line-height: 1.6;
+}
+
+/* About Image Styling */
+.about-image {
+    width: 50%; /* Takes up the left half */
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the space */
+    background-image: url("chocolate\ wallpaper\ about.jpg"); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+}
+
+
+  /* General section styling */
+#products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 100vh;
+    background-color: #f9f3e8; /* Background color */
+}
+
+/* Container for content and image */
+.products-content {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Styling for text (left side) */
+.products-text {
+    width: 50%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.products-text h2 {
+    font-size: 2em;
+    color: #4e2e2f; /* Dark chocolate color */
+    margin-bottom: 10px;
+}
+
+.products-text p {
+    font-size: 1.1em;
+    color: #3b2a28;
+    margin-bottom: 20px;
+}
+
+.view-products-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background-color: #4e2e2f; /* Chocolate color */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.view-products-btn:hover {
+    background-color: #e6b89c; /* Lighter chocolate color */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.view-products-btn:active {
+    background-color: #3b1e1a; /* Darker chocolate color when clicked */
+}
+
+/* Styling for the image (right side) */
+.products-image {
+    width: 50%;
+}
+
+.products-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Contacts section styling */
+#contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 100vh;
+    background-color: #f9f3e8; /* Soft background color */
+    background-image: url("chocolate\ wallpaper\ contac.jpg"); /* Background image */
+    background-size: cover; /* Ensures the image covers the section */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Parallax effect */
+}
+
+/* Container for content */
+.contact-content {
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    width: 100%; /* Full width */
+}
+
+/* Styling for text (right side) */
+.contact-text {
+    width: 50%; /* Half the width of the section */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; /* Left-align the text */
+}
+
+.contact-text h2 {
+    font-size: 2em;
+    color: #4e2e2f; /* Dark chocolate color */
+    margin-bottom: 10px;
+}
+
+.contact-text p {
+    font-size: 1.1em;
+    color: #3b2a28;
+    margin-bottom: 20px;
+}
+
+/* Styling for the Instagram link */
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #3f729b; /* Instagram's signature color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.instagram-link:hover {
+    color: #e1306c; /* Instagram's pink color */
+    text-decoration: underline;
+}
+
+.instagram-link svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Navbar Link Glow Effect */
+.nav-link.active {
+    color: #e6b89c; /* Light chocolate color */
+    text-shadow: 0px 0px 10px #f4d1b2, 0px 0px 15px #f4d1b2; /* Glow effect */
+}
+
+/* For regular nav-link state (when it's not active) */
+.nav-link {
+    color: white;
+    transition: color 0.3s, text-shadow 0.3s; /* Smooth transition for color and glow */
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #4e2e2f; /* Chocolate color */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+}
+
+.brand-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #e6b89c;
+}
+
+.navbar nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #e6b89c;
+}
+
+/* Product List Section */
+#product-list {
+    padding-top: 80px;
+    padding: 40px 20px;
+    background-color: #f9f3e8;
+    display: flex;
+    justify-content: center;
+}
+
+/* Product container for grid */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* space between cards */
+    padding: 20px;
+}
+
+/* Individual product card */
+.product-card {
+    width: 180px; /* Smaller card width */
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for product image */
+.product-card img {
+    width: 100%; /* Make the image fit the card width */
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.product-card h3 {
+    font-size: 1em;
+    margin: 8px 0;
+}
+
+.product-card p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Buttons */
+/* Buttons styling */
+.product-card .btn {
+    font-size: 0.8em;
+    padding: 5px 10px;
+    margin: 5px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff7b54;
+    color: white;
+    transition: background-color 0.2s;
+}
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #4e2e2f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e6b89cc9;
+    transform: scale(1.05);
+}
+
+/* Footer styling */
+.footer {
+    background-color: #4e2e2f;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 0.5em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.footer p {
+    margin: 0;
+    color: #e6b89c;
+}
+
+/* Styling for the quantity control */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 0.9em;
+    margin-top: 8px;
+}
+
+.product-card .btn:hover {
+    background-color: #ff5722;
+}
+
+.quantity-control button {
+    padding: 2px 6px;
+    font-size: 1em;
+    background-color: #ddd;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.quantity-control span {
+    min-width: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Payment Page Styles */
+.payment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 20px;
+}
+
+
+
+.selected-product {
+    display: flex;
+    align-items: flex-start; /* Aligns image and text vertically */
+    gap: 15px; /* Space between image and details */
+}
+
+.selected-product img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-details {
+    text-align: left;
+}
+
+.product-details h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.product-details p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.your-order-text {
+    flex: 1;
+    text-align: center; /* Center aligns "Your Order" between the brand name and payment page */
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.card {
+    padding: 20px;
+    margin: 40px 20px; /* Top and bottom margins only */
+    margin-left: 0; /* Aligns card to the left */
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.payment-container {
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    padding: 20px;
+}
+
+/* Quantity Counter Styles */
+.quantity-counter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.quantity-counter .btn {
+    padding: 5px 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    background-color: #c28c8c;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.quantity-counter .btn:hover {
+    background-color: #443939;
+}
+
+/* Total Price Styles */
+.total-price {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #444;
+}
+
+
+/* Uniform styling for product images */
+.product-card img {
+    width: 100%; /* Make the image fit the card width */
+    height: 150px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensures the image covers the entire area without stretching */
+    border-radius: 5px; /* Optional: adds rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+

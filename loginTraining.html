@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Training Website</title>
+  <link rel="stylesheet" href="stylesTraining.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="username">Email</label>
+        <input type="email" id="username" placeholder="Enter your email" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <div class="password-wrapper">
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <span id="togglePassword" class="eye-icon">👁️</span>
+        </div>
+      </div>
+      <button type="submit">Login</button>
+      <p id="message"></p>
+    </form>
+    <p class="registration-link">
+        Don't have an account? <a href="register.html">Register here</a>
+    </p>
+  </div>
+  <script src="scriptTraining.js"></script>
+</body>
+</html>

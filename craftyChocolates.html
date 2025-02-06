@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crafty_chocolates__</title>
+    <link rel="stylesheet" href="craftyChocolates.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN -->
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand-name">crafty_chocolates__</div>
+        <a href="products-list.html" class="order-btn">Place Your Order</a>
+        <nav>
+            <a href="#home" class="nav-link">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="#about" class="nav-link">
+                <i class="fas fa-info-circle"></i>
+                <span>About</span>
+            </a>
+            <a href="#products" class="nav-link">
+                <i class="fas fa-box"></i>
+                <span>Products</span>
+            </a>
+            <a href="#contacts" class="nav-link">
+                <i class="fas fa-envelope"></i>
+                <span>Contacts</span>
+            </a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="home-content">
+            
+            <div class="home-text">
+                
+                <h2>Welcome to Crafty Chocolates</h2>
+                <p>At Crafty Chocolates, we create homemade chocolates with love, care, and a passion for quality. Every bite is crafted using the finest ingredients, bringing you the most indulgent chocolate experience.</p>
+                <p>We offer a wide variety of flavors and unique combinations, from classic favorites to exciting new blends, perfect for any occasion. Taste the love in every piece!</p>
+              
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Crafty Chocolates</h2>
+                <p>Crafty Chocolates is a passion-driven brand that creates handcrafted chocolates with the finest ingredients. Our chocolates are made with love and dedication, bringing a unique blend of rich flavors and smooth textures that melt in your mouth.</p>
+                <p>Founded with the goal of offering something special, we strive to create chocolates that not only satisfy your sweet tooth but also bring joy to your special moments. </p>
+            
+            </div>
+        </div> 
+    </section>
+
+    <section id="products">
+        <div class="products-content">
+            <div class="products-text">
+                <h2>Our Delicious Products</h2>
+                <p>Explore our handcrafted chocolates, made with love and the finest ingredients.</p>
+                <a href="products-list.html" class="view-products-btn">View Products List</a>
+            </div>
+            
+        </div>
+    </section>
+    
+    <section id="contacts">
+        <div class="contact-content">
+            <div class="contact-text">
+                <h2>Contact</h2>
+                <p>Get in touch with us to place your order or for any inquiries.</p>
+                <p>Feel free to email or call us anytime, and we will be happy to assist you!</p>
+
+                <p>Follow us on Instagram:</p>
+                <a href="https://www.instagram.com/crafty_chocolates__?igsh=NHRnZDRrMmdrOTFx" class="instagram-link" target="_blank">
+                    <img src="instagram logo.webp" alt="Instagram Logo" width="24" height="24">
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    <script>
+                // Get all sections and navigation links
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".navbar nav a");
+
+        // Function to highlight the active section link
+        function highlightSection() {
+        let currentSection = "";
+
+        // Loop through each section to find which one is in the viewport
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            // Check if the section is within the current scroll position
+            if (window.scrollY >= sectionTop - sectionHeight / 3) {
+            currentSection = section.getAttribute("id");
+            }
+        });
+
+        // Loop through each nav link to add/remove the active class
+        navLinks.forEach((link) => {
+            link.classList.remove("active");
+
+            if (link.getAttribute("href") === `#${currentSection}`) {
+            link.classList.add("active");
+            }
+        });
+        }
+
+        // Add event listener for scroll event
+        window.addEventListener("scroll", highlightSection);
+
+                    
+
+            // Function to remove active class from all links
+            function removeActiveClass() {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+            }
+
+            // Function to highlight the active link
+            function highlightActiveLink() {
+                let scrollPosition = window.scrollY; // Get current scroll position
+
+                sections.forEach((section, index) => {
+                    if (scrollPosition >= section.offsetTop - 50 && scrollPosition < section.offsetTop + section.offsetHeight - 50) {
+                        removeActiveClass(); // Remove active class from all links
+                        navLinks[index].classList.add('active'); // Add active class to current link
+                    }
+                });
+            }
+
+            // Run the function on scroll and page load
+            window.addEventListener('scroll', highlightActiveLink);
+            window.addEventListener('load', highlightActiveLink); // In case the page is loaded at a non-zero scroll position
+
+
+    </script>
+</body>
+</html>

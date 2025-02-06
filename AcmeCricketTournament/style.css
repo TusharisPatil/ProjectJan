@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400&display=swap');
+
+/* Winner Card Styling */
+.winner-card {
+    margin-bottom: 1.5em;
+    padding: 1.5em; /* More padding for a spacious look */
+    border-radius: 10px; /* Rounded corners */
+    background: rgba(255, 255, 204, 0.8); /* Light yellowish background with transparency */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+    font-family: 'Merriweather', serif; /* Classic serif font */
+    color: #333; /* Dark text color for contrast */
+    position: relative; /* For positioning the image */
+}
+
+/* Header of Winner Card */
+.winner-card h3 {
+    font-size: 1.4em; /* Larger font size for titles */
+    margin-bottom: 0.5em;
+    color: #d9534f; /* A contrasting color for the header */
+    text-align: center; /* Center the header */
+    font-weight: bold; /* Bold header */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-page background */
+body {
+    background-image: url('cricketwallpaperlawn.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent for contrast */
+    color: #fff;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
+    border-radius: 5px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+        align-items: center;
+    }
+}
+
+/* Countdown banner styling */
+.countdown-banner {
+    background-color: #ffd700; /* Gold with good brightness */
+    color: #000; /* Black for strong contrast */
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 1em 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds separation */
+    border-top: 2px solid #e6c300; /* Slightly darker gold border */
+    border-bottom: 2px solid #e6c300;
+}
+
+/* Sidebar styling */
+.sidebar {
+    position: fixed; /* Fixed position to stick to the left */
+    left: 0;
+    top: 100px; /* Adjust based on your header height */
+    width: 250px; /* Width of the sidebar */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black to match the navbar */
+    padding: 1.5em;
+    border-radius: 0 8px 8px 0; /* Rounded corners on the right side */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    z-index: 1000; /* Make sure it is on top of other content */
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.3em; /* Reduced font size for the heading */
+    color: #fff; /* Change to white */
+}
+
+.sidebar p {
+    color: #fff; /* Ensure paragraph text is white */
+    margin-bottom: 0.5em; /* Space between paragraphs */
+    font-size: 0.9em; /* Reduced font size for paragraphs */
+}
+
+/* Add a margin to the last paragraph to separate Men's and Women's teams */
+.sidebar p:last-of-type {
+    margin-bottom: 1.5em; /* Additional space after the last men's team entry */
+}
+
+/* Styling for the horizontal rule */
+.separator {
+    border: none; /* Remove default border */
+    height: 1px; /* Height of the line */
+    background-color: white; /* Color of the line */
+    margin: 1em 0; /* Space above and below the line */
+}
+
+/* Main content styling */
+.main-content {
+    margin-left: 270px; /* Leave space for the sidebar */
+    padding: 1em; /* Padding for main content */
+    color: red; /* Change this to your preferred color */
+    text-align: left; /* Center the text */
+}
+
+.main-content h1 {
+    color: #d9534f; /* A contrasting color for the heading */
+}
+
+.main-content p {
+    color: #f00; /* Red color for paragraph text */
+}
+
+
+
+/* Ensure the main content has space for the sidebar */
+.main-content {
+    margin-left: 270px; /* Leave space for the sidebar */
+    padding: 1em; /* Padding for main content */
+    color: red; /* Change this to your preferred color */
+    text-align: left; /* Center the text */
+}
+
+.main-content h1 {
+    color: #d9534f; /* A contrasting color for the heading */
+}
+
+.main-content p {
+    color: #f00; /* Red color for paragraph text */
+}
+
+/* Footer styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for contrast */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    padding: 0.5em 0; /* Small padding */
+    position: absolute; /* Fixed position at the bottom */
+    bottom: 0; /* Align to the bottom */
+    width: 100%; /* Full width */
+    font-size: 0.8em; /* Smaller font size */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.sidebar h2 {
+    margin-top: 20px;
+}
+
+/* Secondary Navbar */
+.secondary-navbar {
+    background-color: rgba(173, 216, 230, 0.5); /* Light blue transparent */
+    border-bottom: 2px solid #007bff; /* Blue underline */
+    position: sticky;
+    top: 60px; /* Adjust to match the height of the main navbar */
+    z-index: 99;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-navbar ul {
+    display: flex;
+    justify-content: left;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.secondary-navbar li {
+    margin: 0 1em;
+}
+
+.secondary-navbar a {
+    text-decoration: none;
+    font-size: 1em;
+    color: #007bff; /* Blue text */
+    padding: 0.5em 1em;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondary-navbar a:hover, .secondary-navbar a.active {
+    background-color: rgba(0, 123, 255, 0.2); /* Light blue background */
+    color: #fff; /* White text */
+    border-radius: 5px;
+}
+
+/* Styles for the secondary navbar */
+.secondary-navbar {
+    background-color: rgba(255, 255, 255, 0.5); /* More transparent background */
+    padding: 10px 0; /* Padding for the secondary navbar */
+}
+
+.secondary-navbar ul {
+    list-style: none; /* Remove bullets */
+    text-align: center; /* Center align links */
+    padding: 0; /* Remove padding */
+}
+
+.secondary-navbar li {
+    display: inline; /* Display list items inline */
+    margin: 0 15px; /* Space between items */
+}
+
+.secondary-navbar a {
+    text-decoration: none; /* Remove underline from links */
+    color: #007bff; /* Primary color for links */
+    font-weight: bold; /* Make links bold */
+}
+
+.secondary-navbar a:hover, .secondary-navbar a.active {
+    color: #ffffff; /* Highlight color for active link */
+    background-color: rgba(0, 123, 255, 0.6); /* Light blue background on hover or active */
+    padding: 5px 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+}
+/* Secondary Navbar */
+.secondary-navbar {
+    background-color: #f8f9fa; /* Light grey background */
+    border-bottom: 2px solid #007bff; /* Blue underline */
+    position: sticky;
+    top: 60px; /* Adjust to match the height of the main navbar */
+    z-index: 99;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-navbar ul {
+    display: flex;
+    justify-content: left;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.secondary-navbar li {
+    margin: 0 1em;
+}
+
+.secondary-navbar a {
+    text-decoration: none;
+    font-size: 1em;
+    color: #007bff; /* Blue text */
+    padding: 0.5em 1em;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondary-navbar a:hover, .secondary-navbar a.active {
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+    border-radius: 5px;
+}
+
+
+/* Men's Page: Light Blue Transparent Navbar */
+body.men-page .secondary-navbar {
+    background-color: rgba(173, 216, 230, 0.5); /* Light blue transparent */
+}
+
+body.men-page .secondary-navbar a {
+    color: #007bff; /* Blue font color */
+}
+
+body.men-page .secondary-navbar a:hover,
+body.men-page .secondary-navbar a.active {
+    background-color: rgba(0, 123, 255, 0.2); /* Light blue background on hover/active */
+    color: #ffffff; /* White font color on hover/active */
+}
+
+/* Women's Page: Light Pink Transparent Navbar */
+body.women-page .secondary-navbar {
+    background-color: rgba(255, 182, 193, 0.5); /* Light pink transparent */
+}
+
+body.women-page .secondary-navbar a {
+    color: #ff69b4; /* Pink font color */
+}
+
+body.women-page .secondary-navbar a:hover,
+body.women-page .secondary-navbar a.active {
+    background-color: rgba(255, 105, 180, 0.2); /* Light pink background on hover/active */
+    color: #ffffff; /* White font color on hover/active */
+}
+
+/* Teams Container */
+.teams-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: center;
+    margin-top: 1.5em;
+}
+
+/* Individual Team Card */
+.team-card {
+    background-color: rgba(255, 255, 255, 0.8); /* Light transparent background */
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    text-align: center;
+}
+
+.team-card h2 {
+    color: #007bff; /* Blue for Team Names */
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.team-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.team-card li {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    color: #333; /* Dark text */
+}
+
+/* Make page responsive */
+@media (max-width: 768px) {
+    .teams-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-card {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.teams-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: center; /* Center the content horizontally */
+    margin: 1.5em auto; /* Center the container with auto margin */
+    max-width: 1200px; /* Set a maximum width for the container */
+    padding: 0 1em; /* Add padding to prevent content from touching edges */
+}
+
+
+

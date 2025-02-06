@@ -1,0 +1,87 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px; /* Increased height */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo or Name on the Left */
+nav .brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px; /* Increased spacing between options */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s, box-shadow 0.3s;
+}
+
+/* Glow Effect on Hover */
+nav ul li a:hover,
+nav ul li a.active { /* Active class for current section */
+    color: #00bcd4;
+    box-shadow: 0 0 10px #00bcd4, 0 0 20px #00bcd4;
+    border-radius: 5px;
+}
+
+/* Section Styling */
+section {
+    padding: 100px 20px; /* Increased padding for larger sections */
+    text-align: center;
+}
+
+#home {
+    background: #f4f4f4;
+}
+
+#skills, #experience, #portfolio, #education, #contact {
+    background: #ddd;
+    margin-top: 10px;
+}
+
+/* Headings Styling */
+h1, h2 {
+    margin-bottom: 20px;
+    font-size: 28px; /* Increased font size for better visibility */
+}
+
+/* Smooth Scroll for Anchor Links */
+html {
+    scroll-behavior: smooth;
+}

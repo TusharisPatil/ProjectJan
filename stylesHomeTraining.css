@@ -1,0 +1,73 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0073e6;
+    padding: 10px 20px; /* Reduced padding */
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Brand Name */
+.navbar .brand-name {
+    font-size: 1.5rem; /* Slightly smaller font size */
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigation Links */
+.navbar .nav-links {
+    display: flex;
+    gap: 12px; /* Reduced gap between buttons */
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    font-size: 0.9rem; /* Slightly smaller text */
+    color: white;
+    padding: 8px 15px; /* Reduced padding */
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Hover Effect */
+.navbar .nav-links a:hover {
+    transform: scale(1.1);
+    background-color: #005bb5;
+    box-shadow: 0 0 8px #005bb5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 8px; /* Adjust gap for smaller screens */
+        align-items: flex-start;
+    }
+}

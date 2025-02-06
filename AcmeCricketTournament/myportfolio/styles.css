@@ -1,0 +1,801 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #000; /* Matte black background for the whole site */
+    color: #fff; /* White text for better contrast */
+    overflow: auto; /* Test to ensure scroll works */
+}
+
+html, body {
+    min-height: 100%;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 20px; /* Space around the content */
+    background-color: #000; /* Same matte black background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh; /* Full viewport height */
+}
+section {
+    min-height: 80vh; /* Reduce height for testing */
+}
+
+section h1 {
+    color: #ffd700; /* Golden color for headings */
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+section ul, 
+section div, 
+section p {
+    color: #fff; /* White for text contrast */
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* Navbar Styles  --------------------------------------------------------------*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d1b1b;
+    padding: 30px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-left {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-right a {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between icon and text */
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar-right a:hover {
+    color: #ffd700;
+    text-shadow: 0 0 10px #ffd700;
+}
+
+.navbar-right a.active {
+    border-bottom: 2px solid #ffd700;
+    font-weight: bold;
+}
+
+.navbar-right i {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover animation for icons */
+.navbar-right a:hover i {
+    transform: scale(1.2); /* Slight zoom effect */
+    filter: drop-shadow(0 0 10px #ffd700); /* Glowing effect */
+}
+
+
+/* Intro Text -------------------------------------------------------------------- */
+.intro-text {
+    color: #fff;
+    text-align: center;
+}
+
+.intro-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.intro-text span {
+    color: #ffd700; /* Golden emphasis */
+}
+
+.intro-text p {
+    font-size: 1.5rem;
+}
+
+/* Blinking Cursor Animation */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.cursor {           
+    color: #ffd700;
+    font-weight: bold;
+    animation: blink 1s step-start infinite;
+}
+
+/* Project Cards  ---------------------------------------------------------------------*/
+/* Project Cards */
+.project-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds depth */
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-card:hover {
+    background-color: #242121; /* Dark background on hover */
+    color: #fff; /* White text on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+   
+}
+
+.project-card h3 {
+    color: #ffd700;
+    margin-bottom: 5px;
+    margin: 5px;
+    text-spacing-trim: 5px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.project-image img {
+    width: 100%; box-shadow: 0 0 20px 5px rgba(211, 198, 11, 0.7); /* Glowing effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Skill Buttons */
+.project-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    justify-content: center;
+}
+
+.project-skills button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.project-skills button:hover {
+    background-color: #ffd700;
+    box-shadow: 0 4px 8px rgba(168, 125, 125, 0.1);
+    color: #000;
+    box-shadow: 0 0 15px rgba(218, 213, 193, 0.801);
+}
+
+/* Code Snippets */
+.code-snippet {
+    background-color: #1b1a1a; /* Darker shade for contrast */
+    color: #00ff7f; /* Green text for code */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(214, 207, 176, 0.3);
+    text-align: left;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(44, 42, 42, 0.5); /* Semi-transparent black */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 8px 0; /* Adjusted padding */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    backdrop-filter: blur(5px); /* Adds a glass blur effect */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-right {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}
+#home {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-direction: row; /* Default row direction (horizontal) */
+    justify-content: space-between; /* Add space between the two sections */
+    align-items: center; /* Center items vertically */
+    background-image: url('cooldeveloperwallapaper.jpg'); /* Background image */
+    background-size: cover; /* Ensure the image covers the section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* No repeating of the image */
+    height: 100vh; /* Full viewport height */
+    padding: 50px; /* Space inside the section */
+    color: #ffffff; /* White text for contrast */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    
+}
+
+.home-left {
+    flex: 1; /* Take up equal space */
+    text-align: left;
+    padding: 10px;
+    padding-left: 95px; /* Increase left padding to move content to the right */
+    position: relative; /* Ensure you can use top for fine adjustments */
+    top: -90px; /* Move the content upwards */
+}
+
+.home-left h1 {
+    font-size: 100px;
+    margin-bottom: 2px;
+    line-height: 1.1; /* Adjust this value for tighter spacing */
+    color: #ffd700; /* Golden color for heading */
+}
+
+.home-right {
+    flex: 1; /* Take up equal space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-left h3 {
+    font-family: 'Work Sans', car;
+    
+}
+
+.home-left {
+    margin-top: 80px; /* Adjust the position of the content slightly */
+}
+
+.home-left h3, h2 {
+    margin: 2px 10px; /* Adjust the spacing between the elements */
+    line-height: 0.5; /* Reduce line height if needed */
+}
+
+/* General Button Styles */
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #ffd700; /* Golden button color */
+    color: #000; /* Black text color */
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 10px; /* Space between buttons */
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #fff; /* White background on hover */
+    color: #000; /* Black text on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 0 15px rgba(247, 201, 0, 0.801);
+}
+
+/* Align buttons in a row */
+.button-group {
+    display: flex;
+    gap: 10px; /* Spacing between buttons */
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+}
+
+
+
+
+/* Skills Section Styles ---------------------------------------------------------------------------------*/
+/* Skills Section Styling */
+#skills {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    background: url('cooldeveloperwallapaper\ -\ Copy.jpg') no-repeat center center/cover; /* Add background image */
+}
+
+#skills h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+#skills h3 {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 40px;
+}
+
+/* Skills Container */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Skill Card */
+.skill-card {
+    background-color: #1a1a1a; /* Dark gray */
+    border: 1px solid #bbc712;
+    border-radius: 8px;
+    box-shadow: 8px 8px 10px rgba(230, 226, 9, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 30px;
+}
+
+.skill-card.large {
+    width: 250px;
+    height: 250px;
+}
+
+/* Icon Card (Square for Logo) */
+.icon-card {
+    background-color: #262626; /* Slightly lighter for contrast */
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px; /* Small border radius for a square shape */
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.skill-card.large .icon-card {
+    width: 200px;
+    height: 200px;
+}
+
+/* Icon inside the Icon Card */
+.icon-card img {
+    width: 70%;
+    height: 70%;
+}
+
+/* Skill Name */
+.skill-card p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffffff; /* White text for skill names */
+    margin: 0;
+}
+
+.skill-card.large p {
+    font-size: 1.2rem;
+}
+
+/* Hover Effect */
+/* Hover Effect */
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 238, 0, 0.7); /* Yellow shadow with a glow effect */
+}
+
+/* Skill Card Transition */
+.skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.skill-card:hover {
+    transform: scale(1.1); /* Increase the scale value for a bigger size change */
+    box-shadow: 0 12px 25px rgba(255, 238, 0, 0.7); /* Enhanced shadow for a dramatic effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling effect */
+}
+
+/* Career Section Styles ------------------------------------------------------------------------*/
+/* Career Section Styles ------------------------------------------------------------------------*/
+#career {
+    background: url('cooldeveloperwallapaper\ -\ Copy.jpg') no-repeat center center/cover; /* Add background image */
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+}
+
+#career h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Career Container */
+.career-container {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    gap: 40px; /* Space between rows */
+    width: 90%;
+    margin: 20px auto;
+}
+/* Career Row */
+.career-row {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    align-items: stretch; /* Stretch all child cards to the same height */
+}
+
+/* Career Cards */
+.career-card {
+    background-color: #1a1a1a; /* Dark gray */
+    border: 1px solid #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    margin: 20px;
+    color: #ffffff;
+    display: flex; /* Flex to ensure inner content aligns properly */
+    flex-direction: column; /* Keep content stacked vertically */
+}
+
+/* Logo Card */
+.logo-card {
+    flex: 0 0 20%; /* Set width to 20% */
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start */
+    padding: 5px; /* Reduce padding for less height */
+    margin: 5px; /* Space between cards */
+    max-height: 420px; /* Optional: Set a maximum height */
+    height: auto; /* Allow auto height adjustment */
+   
+}
+
+.company-button {
+
+}
+
+
+.logo-container {
+    width: 95%;
+    height: auto; /* Let the height adjust automatically */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #262626; /* For contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin: 10px;
+    
+}
+
+.project-card:hover {
+
+    box-shadow: 0 0 15px rgba(223, 187, 45, 0.801);
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* Fallback to display image correctly */
+  
+}
+
+
+.logo-card h2 {
+    font-size: 1rem; /* Adjust font size */
+    margin: 3px 0; /* Reduce margin */
+}
+
+.logo-card p {
+    font-size: 0.9rem; /* Adjust font size */
+    color: #cccccc;
+}
+
+
+
+/* Description Card */
+.description-card {
+    flex: 5 0 80%; /* Set width to 80% */
+    text-align: left;
+    display: flex; /* Add flex to fill height */
+    flex-direction: column; /* Stack text vertically */
+    justify-content: space-between; /* Ensure content takes up space evenly */
+}
+
+
+.description-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.description-card p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    color: #eeeeee;
+    text-align: left;
+
+}
+
+.project-name {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 8px 12px; /* Add some padding */
+    font-size: 14px; /* Adjust font size */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+  }
+  
+  .project-name:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+  }
+  
+  .project-name:active {
+    background-color: #388E3C; /* Even darker green when clicked */
+  }
+
+  .role-name {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 8px 12px; /* Add some padding */
+    font-size: 14px; /* Adjust font size */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+  }
+  .role-name:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+  }
+  
+  .role-name:active {
+    background-color: #388E3C; /* Even darker green when clicked */
+  }
+  
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .career-row {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+    }
+
+    .career-card {
+        margin: 0; /* Remove margin for stacked cards */
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+
+
+/* Education Section Styles --------------------------------------------------------------------- */
+/* Education Section Styles */
+#education {
+    padding: 40px;
+    background-color: #000; /* Black background theme */
+    color: #fff; /* White text for contrast */
+    text-align: center;
+    background: url('cooldeveloperwallapaper\ -\ Copy.jpg') no-repeat center center/cover; /* Add background image */
+}
+
+#education h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.education-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+}
+
+.education-card {
+    background-color: #1a1a1a; /* Dark gray for card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.education-card:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8); /* Enhanced shadow on hover */
+}
+
+.education-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff9800; /* Highlight headings with orange */
+    text-align: center;
+}
+
+.education-card ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #ddd; /* Light gray for readability */
+}
+
+.education-card p {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #ddd; /* Light gray for readability */
+    text-align: center;
+}
+
+/* Image Styling */
+.education-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* General Button Styling */
+.education-button {
+    display: inline-block;
+    background-color: #242121; /* Dark background */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Spacing inside button */
+    margin: 10px;
+    border: none; /* Remove borders */
+    border-radius: 5px; /* Rounded edges */
+    font-size: 1.3rem; /* Font size */
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effects */
+}
+
+.education-button-small {
+    display: inline-block;
+    background-color: #352f2f; /* Dark background */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Spacing inside button */
+    margin: 10px;
+    border: none; /* Remove borders */
+    border-radius: 5px; /* Rounded edges */
+    font-size: 0.9rem; /* Font size */
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effects */
+}
+
+/* Hover Effects */
+.education-button:hover {
+    background-color: #444; /* Slightly lighter on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Hover Effects */
+.education-button-small:hover {
+    background-color: #444; /* Slightly lighter on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
+/* Black Card (Special Quote) */
+.black-card {
+    background-color: #000; /* Pure black card */
+    color: #ff9800; /* Highlight the quote in orange */
+    text-align: center;
+    font-style: italic;
+}
+
+
+/* Contact Section :  ------------------------------------------------------------------------------------*/
+
+/* Contact Section Styles */
+#contact {
+    padding: 40px;
+    background: url('cooldeveloperwallapaper\ -\ Copy.jpg') no-repeat center center/cover; /* Add background image */
+    color: #fff; /* White text for contrast */
+    text-align: center;
+}
+
+#contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffd700; /* Golden color for the heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow for better readability */
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact li {
+    margin: 15px 0; /* Add spacing between items */
+}
+
+#contact a {
+    text-decoration: none;
+    color: #fff; /* White text inside the button */
+    font-size: 1.2rem;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 25px;
+    background-color: #ffd700; /* Golden background for buttons */
+    color: #000; /* Black text for buttons */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Button shadow */
+}
+
+.contact-button:hover {
+    background-color: #ffcc33; /* Lighter shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+}
+
+
+
+
+
+
